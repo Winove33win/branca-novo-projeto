@@ -93,25 +93,46 @@ const faqItems = [
 ];
 
 const PnlPalestrantes: React.FC = () => {
+  const publicUrl = process.env.PUBLIC_URL || '';
+  const heroBackgroundStyle = {
+    '--hero-pattern': `url(${publicUrl}/img/spotlight-pattern.svg)`,
+  } as React.CSSProperties;
+  const resultsBackgroundStyle = {
+    '--results-graphic': `url(${publicUrl}/img/audience-wave.svg)`,
+  } as React.CSSProperties;
+  const footerBackgroundStyle = {
+    '--footer-pattern': `url(${publicUrl}/img/spotlight-pattern.svg)`,
+    '--footer-overlay': `url(${publicUrl}/img/audience-wave.svg)`,
+  } as React.CSSProperties;
+
   return (
     <div className="pnl-page">
       <main className="layout-container">
-        <section className="hero">
-          <div className="hero-content">
-            <span className="hero-tag">Curso ao vivo • 20, 21 e 22/11/2025</span>
-            <h1 className="hero-title">PNL para Palestrantes</h1>
-            <p className="hero-subtitle">
-              Use Programação Neurolinguística para criar palestras persuasivas, envolventes e que levam o público à ação —
-              mesmo com plateia fria.
-            </p>
-            <div className="hero-actions">
-              <a className="btn btn-primary" href={paymentLink} target="_blank" rel="noopener noreferrer">
-                Quero garantir minha vaga
-              </a>
-              <a className="btn btn-outline" href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                Falar no WhatsApp
-              </a>
+        <section className="hero" style={heroBackgroundStyle}>
+          <div className="hero-main">
+            <div className="hero-content">
+              <span className="hero-tag">Curso ao vivo • 20, 21 e 22/11/2025</span>
+              <h1 className="hero-title">PNL para Palestrantes</h1>
+              <p className="hero-subtitle">
+                Use Programação Neurolinguística para criar palestras persuasivas, envolventes e que levam o público à ação —
+                mesmo com plateia fria.
+              </p>
+              <div className="hero-actions">
+                <a className="btn btn-primary" href={paymentLink} target="_blank" rel="noopener noreferrer">
+                  Quero garantir minha vaga
+                </a>
+                <a className="btn btn-outline" href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                  Falar no WhatsApp
+                </a>
+              </div>
             </div>
+            <figure className="hero-visual">
+              <img
+                src="/img/hero-illustration.svg"
+                alt="Ilustração de uma palestrante inspirando o público em um palco iluminado"
+                loading="lazy"
+              />
+            </figure>
           </div>
           <aside className="enrollment-card" aria-label="Informações de inscrição">
             <div>
@@ -179,7 +200,11 @@ const PnlPalestrantes: React.FC = () => {
           </div>
         </section>
 
-        <section className="section results-section" aria-labelledby="resultados">
+        <section
+          className="section results-section"
+          aria-labelledby="resultados"
+          style={resultsBackgroundStyle}
+        >
           <h2 id="resultados" className="section-title">
             Depois do curso, suas palestras ficam assim
           </h2>
@@ -211,7 +236,7 @@ const PnlPalestrantes: React.FC = () => {
           </div>
         </section>
 
-        <section className="footer-cta" aria-labelledby="ultima-chamada">
+        <section className="footer-cta" aria-labelledby="ultima-chamada" style={footerBackgroundStyle}>
           <h2 id="ultima-chamada" className="hero-title" style={{ fontSize: '2.2rem' }}>
             As vagas são limitadas para manter a interação no ao vivo. Se essa turma fizer sentido pra você, entre agora.
           </h2>
