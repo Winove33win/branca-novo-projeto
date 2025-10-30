@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import https from "node:https";
+import { spawn } from "node:child_process";
 
 const root = process.cwd();
 const manifestPath = path.join(root, "assets.manifest.json");
@@ -9,12 +10,14 @@ function ensureDir(p) {
   if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true });
 }
 
-function download(url, dest) {
+function downloadWithHttps(url, dest) {
   return new Promise((resolve, reject) => {
     const file = fs.createWriteStream(dest);
     https
       .get(url, res => {
-        if (res.statusCode !== 200) return reject(new Error(`GET ${url} -> ${res.statusCode}`));
+        if (res.statusCode !== 200) {
+          return reject(new Error(`GET ${url} -> ${res.statusCode}`));
+        }
         res.pipe(file);
         file.on("finish", () => file.close(resolve));
       })
@@ -22,6 +25,38 @@ function download(url, dest) {
         fs.unlink(dest, () => reject(err));
       });
   });
+}
+
+function downloadWithCurl(url, dest) {
+  return new Promise((resolve, reject) => {
+    const curl = spawn("curl", ["-fL", url, "-o", dest], {
+      stdio: ["ignore", "ignore", "inherit"],
+    });
+    curl.on("error", reject);
+    curl.on("exit", code => {
+      if (code === 0) {
+        resolve();
+      } else {
+        fs.unlink(dest, () =>
+          reject(new Error(`curl exited with code ${code} for ${url}`))
+        );
+      }
+    });
+  });
+}
+
+async function download(url, dest) {
+  try {
+    await downloadWithCurl(url, dest);
+  } catch (curlErr) {
+    try {
+      await downloadWithHttps(url, dest);
+    } catch (httpsErr) {
+      const error = new Error(`Failed to download ${url}`);
+      error.cause = [curlErr, httpsErr];
+      throw error;
+    }
+  }
 }
 
 async function run() {
