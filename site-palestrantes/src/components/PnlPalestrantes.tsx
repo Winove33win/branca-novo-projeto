@@ -143,10 +143,12 @@ const faqSupport = {
 
 const PnlPalestrantes: React.FC = () => {
   const publicUrl = process.env.PUBLIC_URL || '';
-  const asset = (path: string) => `${publicUrl}${path.startsWith('/') ? path : `/${path}`}`;
+  const asset = (p: string) => `${publicUrl}${p.startsWith('/') ? p : `/${p}`}`;
+
   const heroBackgroundStyle = {
     '--hero-pattern': `url(${asset('/img/spotlight-pattern.svg')})`,
   } as React.CSSProperties;
+
   const heroMedia = {
     photo: asset('/img/hero-branca-stage.jpg'),
     liveThumb: asset('/img/hero-live-thumb.jpg'),
@@ -155,9 +157,11 @@ const PnlPalestrantes: React.FC = () => {
       { src: asset('/img/hero-avatar-02.jpg'), alt: 'Homem sorrindo enquanto assiste a uma apresentação' },
     ],
   };
+
   const resultsBackgroundStyle = {
     '--results-photo': `url(${asset('/img/results-backdrop.jpg')})`,
   } as React.CSSProperties;
+
   const footerBackgroundStyle = {
     '--footer-pattern': `url(${asset('/img/spotlight-pattern.svg')})`,
     '--footer-photo': `url(${asset('/img/footer-event.jpg')})`,
@@ -166,6 +170,7 @@ const PnlPalestrantes: React.FC = () => {
   return (
     <div className="pnl-page">
       <main className="layout-container">
+        {/* HERO */}
         <section className="hero" style={heroBackgroundStyle}>
           <div className="hero-main">
             <div className="hero-content">
@@ -178,8 +183,8 @@ const PnlPalestrantes: React.FC = () => {
               </div>
               <h1 className="hero-title">PNL para Palestrantes</h1>
               <p className="hero-subtitle">
-                Use Programação Neurolinguística para construir palestras que conectam, emocionam e conduzem a plateia ao
-                próximo passo — mesmo quando o público chega frio.
+                Use Programação Neurolinguística para construir palestras que conectam, emocionam e conduzem a plateia
+                ao próximo passo — mesmo quando o público chega frio.
               </p>
               <div className="hero-actions">
                 <a className="btn btn-primary" href={paymentLink} target="_blank" rel="noopener noreferrer">
@@ -190,14 +195,15 @@ const PnlPalestrantes: React.FC = () => {
                 </a>
               </div>
             </div>
+
             <figure className="hero-stage">
-              <img src={heroMedia.photo} alt="Branca Barão falando no palco para um auditório cheio" />
+              <img src={heroMedia.photo} alt="Branca Barão falando no palco para um auditório cheio" loading="lazy" />
               <div className="hero-avatars" aria-hidden="true">
                 {heroMedia.avatars.map((avatar, index) => (
                   <img
                     key={avatar.src}
                     src={avatar.src}
-                    alt=""
+                    alt={avatar.alt}
                     className={`hero-avatar hero-avatar-${index === 0 ? 'top' : 'bottom'}`}
                     loading="lazy"
                   />
@@ -205,6 +211,7 @@ const PnlPalestrantes: React.FC = () => {
               </div>
             </figure>
           </div>
+
           <aside className="enrollment-card" aria-label="Informações de inscrição">
             <div>
               <h2 className="card-title">PNL para Palestrantes</h2>
@@ -225,17 +232,18 @@ const PnlPalestrantes: React.FC = () => {
           </aside>
         </section>
 
+        {/* PARA QUEM É */}
         <section className="section" aria-labelledby="para-quem">
           <h2 id="para-quem" className="section-title">
             Para quem é este curso
           </h2>
           <div className="audience-strip" aria-hidden="true">
-            {audienceStripImages.map((image) => (
+            {audienceStripImages.map(image => (
               <img key={image} src={asset(image)} alt="" loading="lazy" />
             ))}
           </div>
           <div className="cards-grid cols-3 audience-grid">
-            {audienceHighlights.map((item) => (
+            {audienceHighlights.map(item => (
               <div key={item.title} className="card audience-card">
                 <img src={asset(item.image)} alt={item.imageAlt} className="card-thumb" loading="lazy" />
                 <div>
@@ -247,12 +255,13 @@ const PnlPalestrantes: React.FC = () => {
           </div>
         </section>
 
+        {/* O QUE VAI APRENDER */}
         <section className="section" aria-labelledby="conteudo">
           <h2 id="conteudo" className="section-title">
             O que você vai aprender
           </h2>
           <div className="learning-grid">
-            {learningPoints.map((item) => (
+            {learningPoints.map(item => (
               <div
                 key={item.title}
                 className={`learning-card${item.backgroundImage ? ' learning-card--highlight' : ''}`}
@@ -274,12 +283,13 @@ const PnlPalestrantes: React.FC = () => {
           </div>
         </section>
 
+        {/* FORMATO */}
         <section className="section" aria-labelledby="formato">
           <h2 id="formato" className="section-title">
             Formato, datas e acesso
           </h2>
           <div className="info-grid">
-            {infoBlocks.map((block) => (
+            {infoBlocks.map(block => (
               <div key={block.heading} className="info-card">
                 <img src={asset(block.image)} alt={block.imageAlt} loading="lazy" />
                 <div className="info-card-content">
@@ -291,11 +301,8 @@ const PnlPalestrantes: React.FC = () => {
           </div>
         </section>
 
-        <section
-          className="section results-section"
-          aria-labelledby="resultados"
-          style={resultsBackgroundStyle}
-        >
+        {/* RESULTADOS */}
+        <section className="section results-section" aria-labelledby="resultados" style={resultsBackgroundStyle}>
           <h2 id="resultados" className="section-title">
             Depois do curso, suas palestras ficam assim
           </h2>
@@ -310,7 +317,7 @@ const PnlPalestrantes: React.FC = () => {
             <li>Mais segurança ao começar e ao fechar</li>
           </ul>
           <div className="results-gallery">
-            {resultsGallery.map((item) => (
+            {resultsGallery.map(item => (
               <div key={item.title} className="results-gallery-item">
                 <img src={asset(item.image)} alt={item.imageAlt} loading="lazy" />
                 <div className="results-gallery-content">
@@ -325,12 +332,13 @@ const PnlPalestrantes: React.FC = () => {
           </a>
         </section>
 
+        {/* FAQ */}
         <section className="section" aria-labelledby="faq">
           <h2 id="faq" className="section-title">
             Dúvidas frequentes
           </h2>
           <div className="faq-list">
-            {faqItems.map((item) => (
+            {faqItems.map(item => (
               <div key={item.question} className="faq-item">
                 <details>
                   <summary>{item.question}</summary>
@@ -345,7 +353,12 @@ const PnlPalestrantes: React.FC = () => {
               <strong>{faqSupport.headline}</strong>
               <p>{faqSupport.message}</p>
               <div className="faq-support-actions">
-                <a className="btn btn-outline btn-small" href={faqSupport.link} target="_blank" rel="noopener noreferrer">
+                <a
+                  className="btn btn-outline btn-small"
+                  href={faqSupport.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {faqSupport.ctaLabel}
                 </a>
               </div>
@@ -353,6 +366,7 @@ const PnlPalestrantes: React.FC = () => {
           </div>
         </section>
 
+        {/* CTA FINAL */}
         <section className="footer-cta" aria-labelledby="ultima-chamada" style={footerBackgroundStyle}>
           <h2 id="ultima-chamada" className="hero-title" style={{ fontSize: '2.2rem' }}>
             As vagas são limitadas para manter a interação no ao vivo. Se essa turma fizer sentido pra você, entre agora.

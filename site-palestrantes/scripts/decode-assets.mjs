@@ -37,7 +37,9 @@ function downloadWithCurl(url, dest) {
       if (code === 0) {
         resolve();
       } else {
-        fs.unlink(dest, () => reject(new Error(`curl exited with code ${code} for ${url}`)));
+        fs.unlink(dest, () =>
+          reject(new Error(`curl exited with code ${code} for ${url}`))
+        );
       }
     });
   });
