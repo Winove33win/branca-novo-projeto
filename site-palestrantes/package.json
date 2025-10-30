@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "react-scripts start",
     "start": "node app.js",
+    "prebuild": "node scripts/decode-assets.mjs",
     "build": "react-scripts build",
-    "postinstall": "react-scripts build",
+    "postinstall": "node scripts/decode-assets.mjs && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
