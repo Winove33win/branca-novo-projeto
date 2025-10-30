@@ -10,15 +10,27 @@ const audienceHighlights = [
   {
     title: 'Palestrantes que já entregam',
     description: 'Mas querem mais conexão e reação da plateia.',
+    image: '/img/para-quem-speaker.jpg',
+    imageAlt: 'Mulher palestrando com microfone em um palco iluminado',
   },
   {
     title: 'Trainers, facilitadores e instrutores',
     description: 'Que falam em grupo e precisam manter energia.',
+    image: '/img/para-quem-training.jpg',
+    imageAlt: 'Facilitadora guiando um time em treinamento corporativo',
   },
   {
     title: 'Quem vende no palco',
     description: 'E quer conduzir ao próximo passo sem parecer vendedor.',
+    image: '/img/para-quem-vendas.jpg',
+    imageAlt: 'Profissional apresentando slides de vendas para a audiência',
   },
+];
+
+const audienceStripImages = [
+  '/img/para-quem-strip-01.jpg',
+  '/img/para-quem-strip-02.jpg',
+  '/img/para-quem-strip-03.jpg',
 ];
 
 const learningPoints = [
@@ -26,6 +38,7 @@ const learningPoints = [
     icon: '🧠',
     title: 'Estrutura mental da audiência',
     text: 'Decodifique como o público pensa para planejar argumentos certeiros desde os primeiros minutos.',
+    backgroundImage: '/img/learning-highlight.jpg',
   },
   {
     icon: '💬',
@@ -58,14 +71,41 @@ const infoBlocks = [
   {
     heading: 'Datas',
     text: '20, 21 e 22 de novembro de 2025',
+    image: '/img/info-dates.jpg',
+    imageAlt: 'Calendário de mesa com marcações em destaque',
   },
   {
     heading: 'Formato',
     text: 'Online ao vivo, com exemplos e espaço para perguntas',
+    image: '/img/info-live.jpg',
+    imageAlt: 'Notebook exibindo uma videochamada com palestrante ao vivo',
   },
   {
     heading: 'Materiais',
     text: 'Slides e referências para aplicar nas próximas palestras',
+    image: '/img/info-materials.jpg',
+    imageAlt: 'Mão escrevendo anotações sobre material impresso do curso',
+  },
+];
+
+const resultsGallery = [
+  {
+    title: 'Antes do palco',
+    description: 'Você chega preparado com roteiro claro e energia ancorada.',
+    image: '/img/results-before.jpg',
+    imageAlt: 'Palestrante revisando anotações antes de subir ao palco',
+  },
+  {
+    title: 'No palco',
+    description: 'Conexão real com o público, com plateia engajada e participativa.',
+    image: '/img/results-onstage.jpg',
+    imageAlt: 'Plateia sorrindo e interagindo durante apresentação',
+  },
+  {
+    title: 'Pós evento',
+    description: 'Feedbacks quentes e convites para novas apresentações e vendas.',
+    image: '/img/results-after.jpg',
+    imageAlt: 'Participantes compartilhando impressões após palestra',
   },
 ];
 
@@ -92,26 +132,78 @@ const faqItems = [
   },
 ];
 
+const faqSupport = {
+  image: '/img/faq-branca.jpg',
+  imageAlt: 'Branca Barão sorrindo com microfone de mão',
+  headline: 'Tem outra dúvida?',
+  message: 'Chama a equipe da Branca no WhatsApp e a gente responde rapidinho.',
+  ctaLabel: 'Falar com a equipe',
+  link: whatsappLink,
+};
+
 const PnlPalestrantes: React.FC = () => {
+  const publicUrl = process.env.PUBLIC_URL || '';
+  const asset = (path: string) => `${publicUrl}${path.startsWith('/') ? path : `/${path}`}`;
+  const heroBackgroundStyle = {
+    '--hero-pattern': `url(${asset('/img/spotlight-pattern.svg')})`,
+  } as React.CSSProperties;
+  const heroMedia = {
+    photo: asset('/img/hero-branca-stage.jpg'),
+    liveThumb: asset('/img/hero-live-thumb.jpg'),
+    avatars: [
+      { src: asset('/img/hero-avatar-01.jpg'), alt: 'Mulher aplaudindo uma palestra ao vivo' },
+      { src: asset('/img/hero-avatar-02.jpg'), alt: 'Homem sorrindo enquanto assiste a uma apresentação' },
+    ],
+  };
+  const resultsBackgroundStyle = {
+    '--results-photo': `url(${asset('/img/results-backdrop.jpg')})`,
+  } as React.CSSProperties;
+  const footerBackgroundStyle = {
+    '--footer-pattern': `url(${asset('/img/spotlight-pattern.svg')})`,
+    '--footer-photo': `url(${asset('/img/footer-event.jpg')})`,
+  } as React.CSSProperties;
+
   return (
     <div className="pnl-page">
       <main className="layout-container">
-        <section className="hero">
-          <div className="hero-content">
-            <span className="hero-tag">Curso ao vivo • 20, 21 e 22/11/2025</span>
-            <h1 className="hero-title">PNL para Palestrantes</h1>
-            <p className="hero-subtitle">
-              Use Programação Neurolinguística para criar palestras persuasivas, envolventes e que levam o público à ação —
-              mesmo com plateia fria.
-            </p>
-            <div className="hero-actions">
-              <a className="btn btn-primary" href={paymentLink} target="_blank" rel="noopener noreferrer">
-                Quero garantir minha vaga
-              </a>
-              <a className="btn btn-outline" href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                Falar no WhatsApp
-              </a>
+        <section className="hero" style={heroBackgroundStyle}>
+          <div className="hero-main">
+            <div className="hero-content">
+              <div className="hero-meta">
+                <div className="hero-live">
+                  <img src={heroMedia.liveThumb} alt="Thumb do curso ao vivo" loading="lazy" />
+                  <span>Curso ao vivo</span>
+                </div>
+                <span className="hero-tag">20, 21 e 22/11/2025</span>
+              </div>
+              <h1 className="hero-title">PNL para Palestrantes</h1>
+              <p className="hero-subtitle">
+                Use Programação Neurolinguística para construir palestras que conectam, emocionam e conduzem a plateia ao
+                próximo passo — mesmo quando o público chega frio.
+              </p>
+              <div className="hero-actions">
+                <a className="btn btn-primary" href={paymentLink} target="_blank" rel="noopener noreferrer">
+                  Quero garantir minha vaga
+                </a>
+                <a className="btn btn-outline" href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                  Falar no WhatsApp
+                </a>
+              </div>
             </div>
+            <figure className="hero-stage">
+              <img src={heroMedia.photo} alt="Branca Barão falando no palco para um auditório cheio" />
+              <div className="hero-avatars" aria-hidden="true">
+                {heroMedia.avatars.map((avatar, index) => (
+                  <img
+                    key={avatar.src}
+                    src={avatar.src}
+                    alt=""
+                    className={`hero-avatar hero-avatar-${index === 0 ? 'top' : 'bottom'}`}
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+            </figure>
           </div>
           <aside className="enrollment-card" aria-label="Informações de inscrição">
             <div>
@@ -129,6 +221,7 @@ const PnlPalestrantes: React.FC = () => {
               Tirar dúvida no WhatsApp
             </a>
             <p className="card-secure">Compra 100% segura pela Greenn</p>
+            <p className="card-note">Acesso imediato aos materiais de aquecimento após a confirmação.</p>
           </aside>
         </section>
 
@@ -136,11 +229,19 @@ const PnlPalestrantes: React.FC = () => {
           <h2 id="para-quem" className="section-title">
             Para quem é este curso
           </h2>
-          <div className="cards-grid cols-3">
+          <div className="audience-strip" aria-hidden="true">
+            {audienceStripImages.map((image) => (
+              <img key={image} src={asset(image)} alt="" loading="lazy" />
+            ))}
+          </div>
+          <div className="cards-grid cols-3 audience-grid">
             {audienceHighlights.map((item) => (
-              <div key={item.title} className="card">
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+              <div key={item.title} className="card audience-card">
+                <img src={asset(item.image)} alt={item.imageAlt} className="card-thumb" loading="lazy" />
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -152,7 +253,15 @@ const PnlPalestrantes: React.FC = () => {
           </h2>
           <div className="learning-grid">
             {learningPoints.map((item) => (
-              <div key={item.title} className="learning-card">
+              <div
+                key={item.title}
+                className={`learning-card${item.backgroundImage ? ' learning-card--highlight' : ''}`}
+                style={
+                  item.backgroundImage
+                    ? ({ '--learning-card-image': `url(${asset(item.backgroundImage)})` } as React.CSSProperties)
+                    : undefined
+                }
+              >
                 <div className="learning-card-icon" aria-hidden="true">
                   {item.icon}
                 </div>
@@ -172,17 +281,27 @@ const PnlPalestrantes: React.FC = () => {
           <div className="info-grid">
             {infoBlocks.map((block) => (
               <div key={block.heading} className="info-card">
-                <h3>{block.heading}</h3>
-                <p>{block.text}</p>
+                <img src={asset(block.image)} alt={block.imageAlt} loading="lazy" />
+                <div className="info-card-content">
+                  <h3>{block.heading}</h3>
+                  <p>{block.text}</p>
+                </div>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="section results-section" aria-labelledby="resultados">
+        <section
+          className="section results-section"
+          aria-labelledby="resultados"
+          style={resultsBackgroundStyle}
+        >
           <h2 id="resultados" className="section-title">
             Depois do curso, suas palestras ficam assim
           </h2>
+          <p className="results-lead">
+            É sobre dominar o palco inteiro: presença, narrativa, entrega e chamada para ação com confiança.
+          </p>
           <ul>
             <li>Mais atenção e menos gente no celular</li>
             <li>Histórias que realmente geram emoção</li>
@@ -190,6 +309,17 @@ const PnlPalestrantes: React.FC = () => {
             <li>Transição suave para vender seu produto/mentoria</li>
             <li>Mais segurança ao começar e ao fechar</li>
           </ul>
+          <div className="results-gallery">
+            {resultsGallery.map((item) => (
+              <div key={item.title} className="results-gallery-item">
+                <img src={asset(item.image)} alt={item.imageAlt} loading="lazy" />
+                <div className="results-gallery-content">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
           <a className="btn btn-outline" href={paymentLink} target="_blank" rel="noopener noreferrer">
             Quero esse resultado
           </a>
@@ -209,9 +339,21 @@ const PnlPalestrantes: React.FC = () => {
               </div>
             ))}
           </div>
+          <div className="faq-support">
+            <img src={asset(faqSupport.image)} alt={faqSupport.imageAlt} loading="lazy" />
+            <div className="faq-support-content">
+              <strong>{faqSupport.headline}</strong>
+              <p>{faqSupport.message}</p>
+              <div className="faq-support-actions">
+                <a className="btn btn-outline btn-small" href={faqSupport.link} target="_blank" rel="noopener noreferrer">
+                  {faqSupport.ctaLabel}
+                </a>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section className="footer-cta" aria-labelledby="ultima-chamada">
+        <section className="footer-cta" aria-labelledby="ultima-chamada" style={footerBackgroundStyle}>
           <h2 id="ultima-chamada" className="hero-title" style={{ fontSize: '2.2rem' }}>
             As vagas são limitadas para manter a interação no ao vivo. Se essa turma fizer sentido pra você, entre agora.
           </h2>

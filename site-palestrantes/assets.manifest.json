@@ -1,0 +1,92 @@
+{
+  "assets": [
+    {
+      "out": "public/img/spotlight-pattern.svg",
+      "b64": "PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDgwMCA0MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBmMTExMyIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMWEwZjJhIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iYmVhbSIgY3g9IjUwJSIgY3k9IjAlIiByPSI4NSUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjY2JlOTZhIiBzdG9wLW9wYWNpdHk9IjAuNzUiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iNjAlIiBzdG9wLWNvbG9yPSIjNmIyYmMzIiBzdG9wLW9wYWNpdHk9IjAiIC8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJncmlkIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDI1NSwyNTUsMjU1LDApIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0MDAiIHJ4PSIzMiIgZmlsbD0idXJsKCNiZykiIC8+CiAgPGcgb3BhY2l0eT0iMC41NSI+CiAgICA8cGF0aCBkPSJNMCA0MDBMMjAwIDQwTDM2MCA0MDBIMFoiIGZpbGw9InVybCgjYmVhbSkiIC8+CiAgICA8cGF0aCBkPSJNODAwIDQwMEw2MDAgNDBMNDQwIDQwMEg4MDBaIiBmaWxsPSJ1cmwoI2JlYW0pIiAvPgogIDwvZz4KICA8ZyBzdHJva2U9InVybCgjZ3JpZCkiIHN0cm9rZS13aWR0aD0iMS4yIiBvcGFjaXR5PSIwLjYiPgogICAgPHBhdGggZD0iTTQwIDEyMEg3NjAiIC8+CiAgICA8cGF0aCBkPSJNNDAgMjAwSDc2MCIgLz4KICAgIDxwYXRoIGQ9Ik00MCAyODBINzYwIiAvPgogICAgPHBhdGggZD0iTTE2MCA2MFYzNDAiIC8+CiAgICA8cGF0aCBkPSJNMzIwIDYwVjM0MCIgLz4KICAgIDxwYXRoIGQ9Ik00ODAgNjBWMzQwIiAvPgogICAgPHBhdGggZD0iTTY0MCA2MFYzNDAiIC8+CiAgPC9nPgogIDxnIG9wYWNpdHk9IjAuNDUiPgogICAgPGNpcmNsZSBjeD0iMTYwIiBjeT0iMzIwIiByPSIzNiIgZmlsbD0iIzEwMGExZiIgLz4KICAgIDxjaXJjbGUgY3g9IjMyMCIgY3k9IjMwMCIgcj0iNDQiIGZpbGw9IiMxMDBhMWYiIC8+CiAgICA8Y2lyY2xlIGN4PSI0ODAiIGN5PSIzMDAiIHI9IjQ0IiBmaWxsPSIjMTAwYTFmIiAvPgogICAgPGNpcmNsZSBjeD0iNjQwIiBjeT0iMzIwIiByPSIzNiIgZmlsbD0iIzEwMGExZiIgLz4KICA8L2c+CiAgPGcgZmlsbD0iI2Y1ZjhmZiIgb3BhY2l0eT0iMC43Ij4KICAgIDxjaXJjbGUgY3g9IjE2MCIgY3k9IjMyMCIgcj0iOCIgLz4KICAgIDxjaXJjbGUgY3g9IjMyMCIgY3k9IjMwMCIgcj0iMTAiIC8+CiAgICA8Y2lyY2xlIGN4PSI0ODAiIGN5PSIzMDAiIHI9IjEwIiAvPgogICAgPGNpcmNsZSBjeD0iNjQwIiBjeT0iMzIwIiByPSI4IiAvPgogIDwvZz4KICA8ZyBvcGFjaXR5PSIwLjQiIGZpbGw9IiNmZmZmZmYiPgogICAgPGNpcmNsZSBjeD0iOTAiIGN5PSI5MCIgcj0iNiIgLz4KICAgIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjcwIiByPSI0IiAvPgogICAgPGNpcmNsZSBjeD0iMzgwIiBjeT0iNjAiIHI9IjUiIC8+CiAgICA8Y2lyY2xlIGN4PSI1MjAiIGN5PSI3MCIgcj0iNCIgLz4KICAgIDxjaXJjbGUgY3g9IjcxMCIgY3k9IjkwIiByPSI2IiAvPgogIDwvZz4KICA8cmVjdCB4PSI2MCIgeT0iNjAiIHdpZHRoPSI2ODAiIGhlaWdodD0iMjgwIiByeD0iMjQiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjE4KSIgZmlsbD0ibm9uZSIgLz4KPC9zdmc+Cg=="
+    },
+    {
+      "out": "public/img/audience-wave.svg",
+      "b64": "PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjM2MCIgdmlld0JveD0iMCAwIDgwMCAzNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9IndhdmUiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNmIyYmMzIiBzdG9wLW9wYWNpdHk9IjAuOSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMmIxNDUyIiBzdG9wLW9wYWNpdHk9IjAuODUiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJoaWdobGlnaHQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Q3ZmY2YiIgc3RvcC1vcGFjaXR5PSIwLjciIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZiZTdmZiIgc3RvcC1vcGFjaXR5PSIwLjU1IiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSIzNjAiIHJ4PSI0MCIgZmlsbD0iIzBmMTExMyIgLz4KICA8cGF0aCBkPSJNMCAyMjBDMTIwIDE2MCAxNjAgMTIwIDI0MCAxNDBDMzIwIDE2MCAzNjAgMjQwIDQ0MCAyNDBDNTIwIDI0MCA1NjAgMTYwIDY0MCAxNTBDNzIwIDE0MCA3NjAgMjAwIDgwMCAyMTBWMzYwSDBWMjIwWiIgZmlsbD0idXJsKCN3YXZlKSIgLz4KICA8cGF0aCBkPSJNMCAyNjBDODAgMjIwIDE2MCAyMjAgMjIwIDI0MEMyODAgMjYwIDM2MCAzMjAgNDQwIDMwMEM1MjAgMjgwIDYwMCAyMDAgNjgwIDIwMEM3MjAgMjAwIDc2MCAyMTAgODAwIDIzMFYzNjBIMFYyNjBaIiBmaWxsPSJ1cmwoI2hpZ2hsaWdodCkiIG9wYWNpdHk9IjAuMzUiIC8+CiAgPGcgb3BhY2l0eT0iMC40IiBmaWxsPSIjZmZmZmZmIj4KICAgIDxjaXJjbGUgY3g9IjEyMCIgY3k9IjEyMCIgcj0iNiIgLz4KICAgIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjgwIiByPSI1IiAvPgogICAgPGNpcmNsZSBjeD0iMzIwIiBjeT0iMTAwIiByPSI0IiAvPgogICAgPGNpcmNsZSBjeD0iNDQwIiBjeT0iNzAiIHI9IjUiIC8+CiAgICA8Y2lyY2xlIGN4PSI1NjAiIGN5PSIxMDAiIHI9IjQiIC8+CiAgICA8Y2lyY2xlIGN4PSI2ODAiIGN5PSI4MCIgcj0iNSIgLz4KICA8L2c+CiAgPGcgb3BhY2l0eT0iMC4yNSIgZmlsbD0iI2Q3ZmY2YiI+CiAgICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSIyODAiIHI9IjE4IiAvPgogICAgPGNpcmNsZSBjeD0iMjQwIiBjeT0iMzAwIiByPSIyMCIgLz4KICAgIDxjaXJjbGUgY3g9IjMyMCIgY3k9IjMxMCIgcj0iMTYiIC8+CiAgICA8Y2lyY2xlIGN4PSI0MDAiIGN5PSIzMjAiIHI9IjIyIiAvPgogICAgPGNpcmNsZSBjeD0iNDgwIiBjeT0iMzA4IiByPSIxOCIgLz4KICAgIDxjaXJjbGUgY3g9IjU2MCIgY3k9IjI5NiIgcj0iMjAiIC8+CiAgICA8Y2lyY2xlIGN4PSI2NDAiIGN5PSIyODIiIHI9IjE4IiAvPgogIDwvZz4KPC9zdmc+Cg=="
+    },
+    {
+      "out": "public/img/hero-branca-stage.jpg",
+      "url": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
+    },
+    {
+      "out": "public/img/hero-live-thumb.jpg",
+      "url": "https://images.unsplash.com/photo-1654723011663-2ac59c385b16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTB8fHZpZGVvJTIwY2FtZXJhJTIwc3R1ZGlvfGVufDB8fHx8MTc2MTg0OTQwMXww&ixlib=rb-4.1.0&q=80&w=500"
+    },
+    {
+      "out": "public/img/hero-avatar-01.jpg",
+      "url": "https://plus.unsplash.com/premium_photo-1683740128965-ef920e23a5d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8YXVkaWVuY2UlMjBsYXVnaGluZ3xlbnwwfHx8fDE3NjE4NDkzODR8MA&ixlib=rb-4.1.0&q=80&w=600"
+    },
+    {
+      "out": "public/img/hero-avatar-02.jpg",
+      "url": "https://images.unsplash.com/photo-1501950717203-3a5c34c24a24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8YXVkaWVuY2UlMjBsYXVnaGluZ3xlbnwwfHx8fDE3NjE4NDkzODR8MA&ixlib=rb-4.1.0&q=80&w=600"
+    },
+    {
+      "out": "public/img/para-quem-speaker.jpg",
+      "url": "https://images.unsplash.com/photo-1646369505567-3a9cbb052342?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8ZmVtYWxlJTIwc3BlYWtlciUyMHN0YWdlfGVufDB8fHx8MTc2MTg0OTM4OXww&ixlib=rb-4.1.0&q=80&w=1400"
+    },
+    {
+      "out": "public/img/para-quem-training.jpg",
+      "url": "https://images.unsplash.com/photo-1595021247614-8920d4633d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8NHx8ZmVtYWxlJTIwc3BlYWtlciUyMHN0YWdlfGVufDB8fHx8MTc2MTg0OTM4OXww&ixlib=rb-4.1.0&q=80&w=1400"
+    },
+    {
+      "out": "public/img/para-quem-vendas.jpg",
+      "url": "https://images.unsplash.com/photo-1580985899275-9d7aaa4c62fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8M3x8ZmVtYWxlJTIwc3BlYWtlciUyMHN0YWdlfGVufDB8fHx8MTc2MTg0OTM4OXww&ixlib=rb-4.1.0&q=80&w=1400"
+    },
+    {
+      "out": "public/img/para-quem-strip-01.jpg",
+      "url": "https://images.unsplash.com/photo-1758272420863-f094ed9056fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8M3x8YXVkaWVuY2UlMjBsYXVnaGluZ3xlbnwwfHx8fDE3NjE4NDkzODR8MA&ixlib=rb-4.1.0&q=80&w=900"
+    },
+    {
+      "out": "public/img/para-quem-strip-02.jpg",
+      "url": "https://images.unsplash.com/photo-1759375597679-17702c2c4c81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8NHx8YXVkaWVuY2UlMjBsYXVnaGluZ3xlbnwwfHx8fDE3NjE4NDkzODR8MA&ixlib=rb-4.1.0&q=80&w=900"
+    },
+    {
+      "out": "public/img/para-quem-strip-03.jpg",
+      "url": "https://plus.unsplash.com/premium_photo-1683740128939-332a77523d51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8NXx8YXVkaWVuY2UlMjBsYXVnaGluZ3xlbnwwfHx8fDE3NjE4NDkzODR8MA&ixlib=rb-4.1.0&q=80&w=900"
+    },
+    {
+      "out": "public/img/learning-highlight.jpg",
+      "url": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=80"
+    },
+    {
+      "out": "public/img/info-dates.jpg",
+      "url": "https://images.unsplash.com/photo-1542271484-f163235efa6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8ZGVzayUyMGNhbGVuZGFyfGVufDB8fHx8MTc2MTg0OTQwN3ww&ixlib=rb-4.1.0&q=80&w=1200"
+    },
+    {
+      "out": "public/img/info-live.jpg",
+      "url": "https://images.unsplash.com/photo-1588912914078-2fe5224fd8b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8b25saW5lJTIwY291cnNlJTIwbGFwdG9wfGVufDB8fHx8MTc2MTg0OTQxMHww&ixlib=rb-4.1.0&q=80&w=1200"
+    },
+    {
+      "out": "public/img/info-materials.jpg",
+      "url": "https://images.unsplash.com/photo-1615914143778-1a1a6e50c5dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8dGFraW5nJTIwbm90ZXN8ZW58MHx8fHwxNzYxODQ5NDE0fDA&ixlib=rb-4.1.0&q=80&w=1200"
+    },
+    {
+      "out": "public/img/results-backdrop.jpg",
+      "url": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTV8fGF1ZGllbmNlJTIwbGF1Z2hpbmd8ZW58MHx8fHwxNzYxODQ5Mzg0fDA&ixlib=rb-4.1.0&q=80&w=1600"
+    },
+    {
+      "out": "public/img/results-before.jpg",
+      "url": "https://images.unsplash.com/photo-1560523160-c4ef2f0c61a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8cHJlc2VudGF0aW9uJTIwcHJlcGFyYXRpb258ZW58MHx8fHwxNzYxODQ5ODI1fDA&ixlib=rb-4.1.0&q=80&w=1400"
+    },
+    {
+      "out": "public/img/results-onstage.jpg",
+      "url": "https://images.unsplash.com/photo-1527224857830-43a7acc85260?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTB8fGF1ZGllbmNlJTIwbGF1Z2hpbmd8ZW58MHx8fHwxNzYxODQ5Mzg0fDA&ixlib=rb-4.1.0&q=80&w=1400"
+    },
+    {
+      "out": "public/img/results-after.jpg",
+      "url": "https://images.unsplash.com/photo-1553685244-b62f73e4049c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8OHx8YXVkaWVuY2UlMjBsYXVnaGluZ3xlbnwwfHx8fDE3NjE4NDkzNzd8MA&ixlib=rb-4.1.0&q=80&w=1400"
+    },
+    {
+      "out": "public/img/faq-branca.jpg",
+      "url": "https://images.unsplash.com/flagged/photo-1564401398070-9a0ec00bd38a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8cHJvZmVzc2lvbmFsJTIwc3BlYWtlciUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MTg0OTQxN3ww&ixlib=rb-4.1.0&q=80&w=700"
+    },
+    {
+      "out": "public/img/footer-event.jpg",
+      "url": "https://plus.unsplash.com/premium_photo-1679547202671-f9dbbf466db4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8Y29uZmVyZW5jZSUyMGF1ZGllbmNlfGVufDB8fHx8MTc2MTg0OTk3Mnww&ixlib=rb-4.1.0&q=80&w=1600"
+    }
+  ]
+}

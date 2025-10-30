@@ -2,3 +2,6 @@ node_modules/
 build/
 .DS_Store
 .env
+public/img/hero-illustration.svg
+public/img/spotlight-pattern.svg
+public/img/audience-wave.svg
